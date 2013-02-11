@@ -1,6 +1,6 @@
 TestCase('CommandManagerTestCase', {
     setUp:function () {
-        undoManager = new jsCanvasTransform.CommandManager();
+        undoManager = new jsCanvasNinja.CommandManager();
     },
     tearDown:function () {
     },

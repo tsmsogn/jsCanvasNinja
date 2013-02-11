@@ -1,6 +1,6 @@
 TestCase('StageTestCase', {
     setUp:function () {
-        stage = new jsCanvasTransform.Stage();
+        stage = new jsCanvasNinja.Stage();
     },
     tearDown:function () {
     }
