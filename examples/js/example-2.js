@@ -5,7 +5,7 @@ $(function () {
     canvas = document.getElementById("canvas");
     stage = new jsCanvasNinja.Stage(canvas);
 
-    stage.onInsert = handleOnInsert;
+    stage.onStageMouseDown = handleOnStageMouseDown;
     stage.onSave = handleOnUndoRedo;
     stage.onUndo = handleOnUndoRedo;
     stage.onRedo = handleOnUndoRedo;
@@ -257,7 +257,7 @@ function handleChange() {
     }
 }
 
-function handleOnInsert(e) {
+function handleOnStageClick(e) {
     console.log(e);
 }
 

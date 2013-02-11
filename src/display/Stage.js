@@ -137,8 +137,8 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p.onMouseDown = function (e) {
         if (!this.isSelectable()) {
-            if (typeof this.onInsert === 'function') {
-                this.onInsert(e);
+            if (typeof this.onStageMouseDown === 'function') {
+                this.onStageMouseDown(e);
             }
         } else {
             var target = this.getObjectUnderPoint(e.stageX, e.stageY);
