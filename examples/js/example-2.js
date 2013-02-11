@@ -3,7 +3,7 @@ var currentTarget = {};
 
 $(function () {
     canvas = document.getElementById("canvas");
-    stage = new jsCanvasTransform.Stage(canvas);
+    stage = new jsCanvasNinja.Stage(canvas);
 
     stage.onInsert = handleOnInsert;
     stage.onSave = handleOnUndoRedo;
@@ -121,31 +121,31 @@ $(function () {
 
         switch (value) {
             case "bitmap":
-                target = new jsCanvasTransform.Bitmap($("#image")[0], point.x, point.y, $("#image")[0].width, $("#image")[0].height);
+                target = new jsCanvasNinja.Bitmap($("#image")[0], point.x, point.y, $("#image")[0].width, $("#image")[0].height);
                 break;
             case "text":
-                target = new jsCanvasTransform.Text("Hello World", "bold 40px Arial", color, point.x, point.y);
+                target = new jsCanvasNinja.Text("Hello World", "bold 40px Arial", color, point.x, point.y);
                 break;
             case "line":
-                target = new jsCanvasTransform.Line(point.x, point.y, 100, 150, color);
+                target = new jsCanvasNinja.Line(point.x, point.y, 100, 150, color);
                 break;
             case "circle":
-                target = new jsCanvasTransform.Circle(point.x, point.y, 60, color);
+                target = new jsCanvasNinja.Circle(point.x, point.y, 60, color);
                 break;
             case "triangle":
-                target = new jsCanvasTransform.Triangle(point.x, point.y, 60, 90, color);
+                target = new jsCanvasNinja.Triangle(point.x, point.y, 60, 90, color);
                 break;
             case "rect":
-                target = new jsCanvasTransform.Rect(point.x, point.y, 20, 40, color);
+                target = new jsCanvasNinja.Rect(point.x, point.y, 20, 40, color);
                 break;
             case "ellipse":
-                target = new jsCanvasTransform.Ellipse(point.x, point.y, 30, 60, color);
+                target = new jsCanvasNinja.Ellipse(point.x, point.y, 30, 60, color);
                 break;
             case "polystar":
-                target = new jsCanvasTransform.PolyStar(point.x, point.y, 60, 5, 0.6, -90, color);
+                target = new jsCanvasNinja.PolyStar(point.x, point.y, 60, 5, 0.6, -90, color);
                 break;
             case "roundrect":
-                target = new jsCanvasTransform.RoundRect(point.x, point.y, 20, 40, 5, color);
+                target = new jsCanvasNinja.RoundRect(point.x, point.y, 20, 40, 5, color);
                 break;
             default :
                 break;
@@ -194,11 +194,11 @@ $(function () {
         switch (value) {
             case "clockwise":
                 var target = stage.getSelectedObject();
-                jsCanvasTransform.Transform.rotate.call(target, target.rotation + 10);
+                jsCanvasNinja.Transform.rotate.call(target, target.rotation + 10);
                 break;
             case "counterclockwise":
                 var target = stage.getSelectedObject();
-                jsCanvasTransform.Transform.rotate.call(target, target.rotation - 10);
+                jsCanvasNinja.Transform.rotate.call(target, target.rotation - 10);
                 break;
             default :
                 break;
@@ -215,11 +215,11 @@ $(function () {
         switch (value) {
             case "+":
                 var target = stage.getSelectedObject();
-                jsCanvasTransform.Transform.scale.call(target, {scaleX:target.scaleX + 0.1, scaleY:target.scaleY + 0.1});
+                jsCanvasNinja.Transform.scale.call(target, {scaleX:target.scaleX + 0.1, scaleY:target.scaleY + 0.1});
                 break;
             case "-":
                 var target = stage.getSelectedObject();
-                jsCanvasTransform.Transform.scale.call(target, {scaleX:target.scaleX - 0.1, scaleY:target.scaleY - 0.1});
+                jsCanvasNinja.Transform.scale.call(target, {scaleX:target.scaleX - 0.1, scaleY:target.scaleY - 0.1});
                 break;
             default :
                 break;
@@ -268,7 +268,7 @@ function handleOnUndoRedo(obj) {
 
 function handleSlide() {
     var target = stage.getSelectedObject();
-    if (target && jsCanvasTransform.Utility.hasColor(target)) {
+    if (target && jsCanvasNinja.Utility.hasColor(target)) {
         var red = $('#red').slider('value');
         var green = $('#green').slider('value');
         var blue = $('#blue').slider('value');
