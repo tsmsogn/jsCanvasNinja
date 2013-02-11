@@ -1,7 +1,7 @@
 
 # jsCanvasNinja
 
-jsCanvasNinja is a library can transform with handle.
+jsCanvasNinja is canvas library can transform, undo and redo etc.
 
 ## Installation
 
