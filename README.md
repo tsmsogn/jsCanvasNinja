@@ -33,7 +33,7 @@ EaselJS 0.5.0 or newer
 
 ##### onStageMouseDown(event)
 
-The onStageMouseDown callback is called when stage clicked. It coundn't be called when jsCanvasNinja#getMode() is `'select'` and mouse down point has another DisplayObjects.
+The onStageMouseDown callback is called only when the user presses the mouse button over the canvas besides jsCanvasNinja#getMode() is `'select'`.
 
 ```
 Parameters:
