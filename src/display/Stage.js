@@ -133,7 +133,6 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     /**
      *
      * @param e
-     * @return {*}
      */
     p.onMouseDown = function (e) {
         if (!this.isSelectable()) {
@@ -150,7 +149,6 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                 }
             }
         }
-        return target || null;
     };
 
     /**
@@ -546,7 +544,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                     }
                 };
                 e.onMouseUp = function (evt) {
-                    // TODO Implement callback
+                    // @TODO Implement callback
                     if (point.x !== target.x || point.y !== target.y) {
                         self.update(true);
                     }
@@ -554,7 +552,6 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
             }
             return target;
         })(target, this);
-//        return target;
     };
 
     /**
