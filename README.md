@@ -1,5 +1,5 @@
 
-# jsCanvasTransform
+# jsCanvasNinja
 
 jsCanvasNinja is a library can transform with handle.
 
@@ -19,7 +19,7 @@ EaselJS 0.5.0 or newer
 
 ### Stage
 
-`jsCanvasTransform.Stage` is subclass of `EaselJS.Stage`.
+`jsCanvasNinja.Stage` is subclass of `EaselJS.Stage`.
 
 #### Public methods
 
