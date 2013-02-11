@@ -3,7 +3,7 @@ var currentTarget = {};
 
 $(function () {
     canvas = document.getElementById("canvas");
-    stage = new jsCanvasNinja.Stage(canvas);
+    stage = new jsCanvasNinja.Stage(canvas, {mode:'insert'});
 
     stage.onStageMouseDown = handleOnStageMouseDown;
     stage.onSave = handleOnUndoRedo;
@@ -257,7 +257,7 @@ function handleChange() {
     }
 }
 
-function handleOnStageClick(e) {
+function handleOnStageMouseDown(e) {
     console.log(e);
 }
 
