@@ -185,16 +185,16 @@ $(function () {
 
     // Rotation
     $("#button_clockwise, #button_counterclockwise").click(function () {
-        if (!stage.getSelectedObject()) return;
+        if (!stage.getTarget()) return;
 
         var value = $(this).text().toString().toLocaleLowerCase();
         switch (value) {
             case "clockwise":
-                var target = stage.getSelectedObject();
+                var target = stage.getTarget();
                 jsCanvasNinja.Transform.rotate.call(target, target.rotation + 10);
                 break;
             case "counterclockwise":
-                var target = stage.getSelectedObject();
+                var target = stage.getTarget();
                 jsCanvasNinja.Transform.rotate.call(target, target.rotation - 10);
                 break;
             default :
@@ -206,16 +206,16 @@ $(function () {
 
     // Scale
     $("#button_scale_plus, #button_scale_minus").click(function () {
-        if (!stage.getSelectedObject()) return;
+        if (!stage.getTarget()) return;
 
         var value = $(this).text().toString().toLocaleLowerCase();
         switch (value) {
             case "+":
-                var target = stage.getSelectedObject();
+                var target = stage.getTarget();
                 jsCanvasNinja.Transform.scale.call(target, {scaleX:target.scaleX + 0.1, scaleY:target.scaleY + 0.1});
                 break;
             case "-":
-                var target = stage.getSelectedObject();
+                var target = stage.getTarget();
                 jsCanvasNinja.Transform.scale.call(target, {scaleX:target.scaleX - 0.1, scaleY:target.scaleY - 0.1});
                 break;
             default :
@@ -232,8 +232,8 @@ $(function () {
 
         switch (value) {
             case "clone":
-                if (stage.getSelectedObject()) {
-                    stage.addChild(stage.getSelectedObject().clone());
+                if (stage.getTarget()) {
+                    stage.addChild(stage.getTarget().clone());
                     stage.update(true);
                 }
                 break;
@@ -249,7 +249,7 @@ function tick() {
 }
 
 function handleChange() {
-    if (stage.getSelectedObject() && currentTarget.id === stage.getSelectedObject().id) {
+    if (stage.getTarget() && currentTarget.id === stage.getTarget().id) {
         stage.update(true);
     }
 }
@@ -260,7 +260,7 @@ function handleOnUndoRedo(obj) {
 }
 
 function handleSlide() {
-    var target = stage.getSelectedObject();
+    var target = stage.getTarget();
     if (target && jsCanvasNinja.Utility.hasColor(target)) {
         var red = $('#red').slider('value');
         var green = $('#green').slider('value');

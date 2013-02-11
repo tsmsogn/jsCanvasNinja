@@ -50,7 +50,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this._isSelectable = this._options.canSelect || true;
         this.didCommands = [];
         this.undidCommands = [];
-        this._selectedObject = null;
+        this._target = null;
         this._frame = (this._options.frame) ? this._options.frame : new jsCanvasNinja.Frame();
     };
 
@@ -142,7 +142,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         } else {
             var target = this.getObjectUnderPoint(e.stageX, e.stageY);
             if (target && (!this._frame || !this._frame.isElement(target))) {
-                this.setSelectedObject(target);
+                this.setTarget(target);
                 this._createFrame();
                 if (typeof this.onSelect === 'function') {
                     this.onSelect(target, e);
@@ -206,16 +206,16 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      *
      * @param target
      */
-    p.setSelectedObject = function (target) {
-        this._selectedObject = target;
+    p.setTarget = function (target) {
+        this._target = target;
     };
 
     /**
      *
      * @return {*}
      */
-    p.getSelectedObject = function () {
-        return this._selectedObject;
+    p.getTarget = function () {
+        return this._target;
     };
 
     /**
@@ -239,7 +239,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p._createFrame = function () {
 
-        var object = this.getSelectedObject();
+        var object = this.getTarget();
 
         this._removeFrame();
 
@@ -520,8 +520,8 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @private
      */
     p._updateFrame = function () {
-        if (this._frame && this.getSelectedObject()) {
-            this._frame.update.call(this.getSelectedObject(), this._frame.getElements());
+        if (this._frame && this.getTarget()) {
+            this._frame.update.call(this.getTarget(), this._frame.getElements());
         }
     };
 
@@ -560,7 +560,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @return {Boolean}
      */
     p.sendBackward = function (target) {
-        target = target || this.getSelectedObject();
+        target = target || this.getTarget();
         if (target) {
             var index = this.getChildIndex(target);
             this.addChildAt(target, index - 1);
@@ -576,7 +576,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @param target
      */
     p.sendToBack = function (target) {
-        target = target || this.getSelectedObject();
+        target = target || this.getTarget();
         while (this.sendBackward(target)) {
         }
     };
@@ -587,7 +587,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @return {Boolean}
      */
     p.bringForward = function (target) {
-        target = target || this.getSelectedObject();
+        target = target || this.getTarget();
         if (target) {
             var index = this.getChildIndex(target);
             if (!this._frame.isElement(this.getChildAt(index + 1))) {
@@ -603,7 +603,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @param target
      */
     p.bringToFront = function (target) {
-        target = target || this.getSelectedObject();
+        target = target || this.getTarget();
         while (this.bringForward(target)) {
         }
     };
@@ -613,10 +613,10 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @param target
      */
     p.delete = function (target) {
-        target = target || this.getSelectedObject();
+        target = target || this.getTarget();
         if (target) {
             this.removeChild(target);
-            this.setSelectedObject(null);
+            this.setTarget(null);
             this._removeFrame();
         }
     };
