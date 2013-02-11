@@ -19,7 +19,7 @@ EaselJS 0.5.0 or newer
 
 ### Stage
 
-`jsCanvasNinja.Stage` is subclass of `EaselJS.Stage`.
+`'jsCanvasNinja.Stage'` is subclass of `'EaselJS.Stage'`.
 
 #### Public methods
 
@@ -29,9 +29,16 @@ EaselJS 0.5.0 or newer
 
 ##### isSelectable()
 
-##### 
-
 #### Callbacks
+
+##### onStageMouseDown(event)
+
+The onStageMouseDown callback is called only when the user presses the mouse button over the canvas besides jsCanvasNinja#getMode() is `'select'`.
+
+```
+Parameters:
+	event <MouseEvent> A MouseEvent instance with information about the current mouse event. (http://www.createjs.com/Docs/EaselJS/MouseEvent.html)
+```
 
 ##### onSelect(target, event)
 
@@ -40,7 +47,7 @@ Executes immediately when forefront target clicked.
 ```
 Parameters:
 	target <DisplayObject>
-	event <MouseEvent> A MouseEvent instance with information about the current mouse event.
+	event <MouseEvent> A MouseEvent instance with information about the current mouse event. (http://www.createjs.com/Docs/EaselJS/MouseEvent.html)
 ```
 
 ##### beforeToDataURL()
