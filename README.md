@@ -1,7 +1,7 @@
 
 # jsCanvasTransform
 
-jsCanvasTransform is a library can transform with handle.
+jsCanvasNinja is a library can transform with handle.
 
 ## Installation
 
@@ -14,11 +14,6 @@ EaselJS 0.5.0 or newer
 - Rotate
 - Scale
 - Undo/Redo
-
-## Demos
-
-- <http://tsmsogn.com/downloads/code/jsCanvasTransform/examples/example-1.html>
-- <http://tsmsogn.com/downloads/code/jsCanvasTransform/examples/example-2.html>
 
 ## Documents
 
