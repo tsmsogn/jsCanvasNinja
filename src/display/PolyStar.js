@@ -66,7 +66,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.pointSize = pointSize;
         this.angle = angle;
         this.color = color;
-        this._center = true;
+        this._type = jsCanvasNinja.Utility._CENTER;
 
         this.graphics = new createjs.Graphics().beginFill(this.color).drawPolyStar(0, 0, this.radius, this.sides, this.pointSize, this.angle).endFill();
     };

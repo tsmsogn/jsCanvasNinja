@@ -59,7 +59,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.height =  imageOrUri.height;
         this.x = x - this.width * 0.5;
         this.y = y - this.height * 0.5;
-        this._center = Boolean(false);
+        this._type = 0;
     };
 
     /**

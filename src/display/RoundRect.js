@@ -60,7 +60,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.y = y - this.height * 0.5;
         this.radius = radius;
         this.color = color;
-        this._center = false;
+        this._type = 0;
 
         this.graphics = new createjs.Graphics().beginFill(this.color).drawRoundRect(0, 0, this.width, this.height, this.radius).endFill();
     };

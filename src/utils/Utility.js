@@ -31,6 +31,8 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         throw 'Utility cannot be instantiated';
     };
 
+    Utility._CENTER = 1;
+
     /**
      *
      * @param target
@@ -75,7 +77,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @return {Boolean|*}
      */
     Utility.isCentralCoordinate = function (target) {
-        return (target) ? target.hasOwnProperty('_center') && target._center : false; // @TODO Check another property
+        return (target) ? target.hasOwnProperty('_type') && Boolean(this._CENTER & target._type) : false; // @TODO Check another property
     };
 
     jsCanvasNinja.Utility = Utility;

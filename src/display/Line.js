@@ -61,7 +61,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.toX = toX;
         this.toY = toY;
         this.color = color;
-        this._center = false;
+        this._type = 0;
 
         this.graphics = new createjs.Graphics().beginStroke(this.color).moveTo(0, 0).lineTo(this.toX, this.toY).endFill();
     };

@@ -57,7 +57,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.x = x - this.width * 0.5;
         this.y = y - this.height * 0.5;
         this.color = color;
-        this._center = false;
+        this._type = 0;
 
         this.graphics = new createjs.Graphics().beginFill(this.color).drawRect(0, 0, this.width, this.height).endFill();
     };
