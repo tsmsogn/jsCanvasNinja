@@ -38,8 +38,6 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.initialize(x, y, radius, color);
     }, p = Circle.prototype = new createjs.Shape();
 
-    p.Shape_initialize = p.initialize;
-
     /**
      *
      * @param x
@@ -80,7 +78,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p.setColor = function (color) {
         this.color = color;
-        this.graphics.clear().beginFill(color).drawCircle(0, 0, this.radius).endFill();
+        this.graphics.clear().beginFill(this.color).drawCircle(0, 0, this.radius).endFill();
     };
 
     /**

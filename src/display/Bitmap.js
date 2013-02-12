@@ -26,8 +26,17 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
 
 (function () {
 
-    var Bitmap = function (imageOrUri, x, y, w, h) {
-        this.initialize(imageOrUri, x, y, w, h);
+    /**
+     *
+     * @param imageOrUri
+     * @param x
+     * @param y
+     * @param width
+     * @param height
+     * @constructor
+     */
+    var Bitmap = function (imageOrUri, x, y, width, height) {
+        this.initialize(imageOrUri, x, y, width, height);
     }, p = Bitmap.prototype = new createjs.Bitmap();
 
     p.Bitmap_initalize = p.initialize;
@@ -37,10 +46,10 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @param imageOrUri
      * @param x
      * @param y
-     * @param w
-     * @param h
+     * @param width
+     * @param height
      */
-    p.initialize = function (imageOrUri, x, y, w, h) {
+    p.initialize = function (imageOrUri, x, y, width, height) {
         this.Bitmap_initalize(imageOrUri);
 
         x = (!isNaN(x)) ? x : 0;

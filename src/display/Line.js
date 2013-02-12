@@ -30,11 +30,13 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      *
      * @param x
      * @param y
+     * @param toX
+     * @param toY
      * @param color
      * @constructor
      */
-    var Line = function (x, y, fromX, fromY, color) {
-        this.initialize(x, y, fromX, fromY, color);
+    var Line = function (x, y, toX, toY, color) {
+        this.initialize(x, y, toX, toY, color);
     }, p = Line.prototype = new createjs.Shape();
 
     p.Shape_initialize = p.initialize;
@@ -61,7 +63,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.color = color;
         this._center = false;
 
-        this.graphics = new createjs.Graphics().beginStroke(color).moveTo(0, 0).lineTo(toX, toY).endFill();
+        this.graphics = new createjs.Graphics().beginStroke(this.color).moveTo(0, 0).lineTo(this.toX, this.toY).endFill();
     };
 
     /**
@@ -80,7 +82,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p.setColor = function (color) {
         this.color = color;
-        this.graphics.clear().beginStroke(color).moveTo(0, 0).lineTo(this.toX, this.toY).endFill();
+        this.graphics.clear().beginStroke(this.color).moveTo(0, 0).lineTo(this.toX, this.toY).endFill();
     };
 
     /**

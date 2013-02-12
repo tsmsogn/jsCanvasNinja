@@ -39,8 +39,6 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.initialize(x, y, side, height, color);
     }, p = Triangle.prototype = new createjs.Shape();
 
-    p.Shape_initialize = p.initialize;
-
     /**
      *
      * @param x
@@ -64,7 +62,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.color = color;
         this._center = true;
 
-        this.graphics = new createjs.Graphics().beginFill(color).moveTo(0, -height * 0.5).lineTo(side * 0.5, height * 0.5).lineTo(-side * 0.5, height * 0.5).lineTo(0, -height * 0.5).endFill();
+        this.graphics = new createjs.Graphics().beginFill(this.color).moveTo(0, -this.height * 0.5).lineTo(this.side * 0.5, this.height * 0.5).lineTo(-this.side * 0.5, this.height * 0.5).lineTo(0, -this.height * 0.5).endFill();
     };
 
     /**
@@ -83,7 +81,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p.setColor = function (color) {
         this.color = color;
-        this.graphics.clear().beginFill(color).moveTo(0, -this.height * 0.5).lineTo(this.side * 0.5, this.height * 0.5).lineTo(-this.side * 0.5, this.height * 0.5).lineTo(0, -this.height * 0.5).endFill();
+        this.graphics.clear().beginFill(this.color).moveTo(0, -this.height * 0.5).lineTo(this.side * 0.5, this.height * 0.5).lineTo(-this.side * 0.5, this.height * 0.5).lineTo(0, -this.height * 0.5).endFill();
     };
 
     /**

@@ -64,7 +64,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.y = y - height * 0.5;
         this._center = false;
         this.hitArea = new createjs.Shape();
-        this.hitArea.graphics.beginFill("#000").drawRect(0, 0, width, height).endFill();
+        this.hitArea.graphics.beginFill("#000").drawRect(0, 0, this.width, this.height).endFill();
     };
 
     /**

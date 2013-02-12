@@ -30,41 +30,39 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      *
      * @param x
      * @param y
-     * @param w
-     * @param h
+     * @param width
+     * @param height
      * @param radius
      * @param color
      * @constructor
      */
-    var RoundRect = function (x, y, w, h, radius, color) {
-        this.initialize(x, y, w, h, radius, color);
+    var RoundRect = function (x, y, width, height, radius, color) {
+        this.initialize(x, y, width, height, radius, color);
     }, p = RoundRect.prototype = new createjs.Shape();
-
-    p.Shape_initialize = p.initialize;
 
     /**
      *
      * @param x
      * @param y
-     * @param w
-     * @param h
+     * @param width
+     * @param height
      * @param radius
      * @param color
      */
-    p.initialize = function (x, y, w, h, radius, color) {
+    p.initialize = function (x, y, width, height, radius, color) {
         x = (!isNaN(x)) ? x : 0;
         y = (!isNaN(y)) ? y : 0;
         color = color || 'rgba(255, 255, 255, 1)';
 
-        this.width = w;
-        this.height = h;
+        this.width = width;
+        this.height = height;
         this.x = x - this.width * 0.5;
         this.y = y - this.height * 0.5;
         this.radius = radius;
         this.color = color;
         this._center = false;
 
-        this.graphics = new createjs.Graphics().beginFill(color).drawRoundRect(0, 0, w, h, radius).endFill();
+        this.graphics = new createjs.Graphics().beginFill(this.color).drawRoundRect(0, 0, this.width, this.height, this.radius).endFill();
     };
 
     /**
@@ -83,7 +81,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p.setColor = function (color) {
         this.color = color;
-        this.graphics.clear().beginFill(color).drawRoundRect(0, 0, this.width, this.height, this.radius).endFill();
+        this.graphics.clear().beginFill(this.color).drawRoundRect(0, 0, this.width, this.height, this.radius).endFill();
     };
 
     /**

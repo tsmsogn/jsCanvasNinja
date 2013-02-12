@@ -68,7 +68,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.color = color;
         this._center = true;
 
-        this.graphics = new createjs.Graphics().beginFill(color).drawPolyStar(0, 0, radius, sides, pointSize, angle).endFill();
+        this.graphics = new createjs.Graphics().beginFill(this.color).drawPolyStar(0, 0, this.radius, this.sides, this.pointSize, this.angle).endFill();
     };
 
     /**
@@ -87,7 +87,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p.setColor = function (color) {
         this.color = color;
-        this.graphics.clear().beginFill(color).drawPolyStar(0, 0, this.radius, this.sides, this.pointSize, this.angle).endFill();
+        this.graphics.clear().beginFill(this.color).drawPolyStar(0, 0, this.radius, this.sides, this.pointSize, this.angle).endFill();
     };
 
     /**

@@ -30,36 +30,36 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      *
      * @param x
      * @param y
-     * @param w
-     * @param h
+     * @param width
+     * @param height
      * @param color
      * @constructor
      */
-    var Rect = function (x, y, w, h, color) {
-        this.initialize(x, y, w, h, color);
+    var Rect = function (x, y, width, height, color) {
+        this.initialize(x, y, width, height, color);
     }, p = Rect.prototype = new createjs.Shape();
 
     /**
      *
      * @param x
      * @param y
-     * @param w
-     * @param h
+     * @param width
+     * @param height
      * @param color
      */
-    p.initialize = function (x, y, w, h, color) {
+    p.initialize = function (x, y, width, height, color) {
         x = (!isNaN(x)) ? x : 0;
         y = (!isNaN(y)) ? y : 0;
         color = color || 'rgba(255, 255, 255, 1)';
 
-        this.width = w;
-        this.height = h;
+        this.width = width;
+        this.height = height;
         this.x = x - this.width * 0.5;
         this.y = y - this.height * 0.5;
         this.color = color;
         this._center = false;
 
-        this.graphics = new createjs.Graphics().beginFill(color).drawRect(0, 0, w, h).endFill();
+        this.graphics = new createjs.Graphics().beginFill(this.color).drawRect(0, 0, this.width, this.height).endFill();
     };
 
     /**
@@ -78,7 +78,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p.setColor = function (color) {
         this.color = color;
-        this.graphics.clear().beginFill(color).drawRect(0, 0, this.width, this.height).endFill();
+        this.graphics.clear().beginFill(this.color).drawRect(0, 0, this.width, this.height).endFill();
     };
 
     /**
