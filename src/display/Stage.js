@@ -47,7 +47,6 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         // Initialize
         this.setMode(this._options.mode);
         this.setScaleType(false);
-        this._isSelectable = this._options.canSelect || true;
         this.didCommands = [];
         this.undidCommands = [];
         this._target = null;
@@ -135,7 +134,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @param e
      */
     p.onMouseDown = function (e) {
-        if (!this.isSelectable()) {
+        if (this.getMode() === 'insert') {
             if (typeof this.onStageMouseDown === 'function') {
                 this.onStageMouseDown(e);
             }
@@ -165,25 +164,6 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     p.getMode = function () {
         return this.mode;
-    };
-
-    /**
-     *
-     * @param selectable
-     */
-    p.setSelectable = function (selectable) {
-        this._isSelectable = Boolean(selectable);
-        if (!this.isSelectable()) {
-            this._removeFrame();
-        }
-    };
-
-    /**
-     *
-     * @return {Boolean}
-     */
-    p.isSelectable = function () {
-        return Boolean(this._isSelectable);
     };
 
     /**
@@ -539,7 +519,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                 e.onMouseMove = function (evt) {
                     target.x = evt.stageX + offset.x;
                     target.y = evt.stageY + offset.y;
-                    if (self.isSelectable()) {
+                    if (self.getMode() === 'select') {
                         self._createFrame();
                     }
                 };
