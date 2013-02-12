@@ -46,7 +46,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         var rotationCircles = ['TOP_LEFT_HANDLE_FOR_ROTATION', 'TOP_RIGHT_HANDLE_FOR_ROTATION', 'BOTTOM_RIGHT_HANDLE_FOR_ROTATION', 'BOTTOM_LEFT_HANDLE_FOR_ROTATION'];
         for (var i = 0; i < rotationCircles.length; i++) {
             var name = rotationCircles[i];
-            var element = new createjs.Shape(new createjs.Graphics().beginFill('rgba(255, 0, 0, 1)').drawCircle(0, 0, radius + 5).endFill());
+            var element = new jsCanvasNinja.Circle(0, 0, radius + 5, 'rgba(255, 0, 0, 1)');
             element.name = name;
             this._elements.push(element);
         }
@@ -55,7 +55,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         var resizeCircles = (scaleType) ? ['TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE', 'TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE', 'BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE', 'BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE'] : ['TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE', 'TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE', 'BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE', 'BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE'];
         for (var i = 0; i < resizeCircles.length; i++) {
             var name = resizeCircles[i];
-            var element = new createjs.Shape(new createjs.Graphics().beginFill('rgba(255, 255, 255, 1)').drawCircle(0, 0, radius).endFill());
+            var element = new jsCanvasNinja.Circle(0, 0, radius, 'rgba(255, 255, 255, 1)');
             element.name = name;
             this._elements.push(element);
         }
