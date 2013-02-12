@@ -77,7 +77,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @return {Boolean|*}
      */
     Utility.isCentralCoordinate = function (target) {
-        return (target) ? target.hasOwnProperty('_type') && Boolean(this._CENTER & target._type) : false; // @TODO Check another property
+        return (target) ? target.hasOwnProperty('_type') && Boolean(this._CENTER & target._type) : false;
     };
 
     jsCanvasNinja.Utility = Utility;
