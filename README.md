@@ -20,9 +20,9 @@ EaselJS 0.5.0 or newer
 - <http://tsmsogn.com/downloads/code/jsCanvasNinja/examples/example-1.html>
 - <http://tsmsogn.com/downloads/code/jsCanvasNinja/examples/example-2.html>
 
-## Contribute
+## Contributing
 
-You can also contribute code:
+Please fork this repository and contribute back using pull requests.
 
 1. Fork the code on GitHub
 2. Clone your fork in your environment: git clone git@github.com:USERNAME/jsCanvasNinja.git
