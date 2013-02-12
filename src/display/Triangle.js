@@ -60,7 +60,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.y = y;
         this.side = side;
         this.color = color;
-        this._center = true;
+        this._type = jsCanvasNinja.Utility._CENTER;
 
         this.graphics = new createjs.Graphics().beginFill(this.color).moveTo(0, -this.height * 0.5).lineTo(this.side * 0.5, this.height * 0.5).lineTo(-this.side * 0.5, this.height * 0.5).lineTo(0, -this.height * 0.5).endFill();
     };

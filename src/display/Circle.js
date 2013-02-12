@@ -56,7 +56,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this.x = x;
         this.y = y;
         this.color = color;
-        this._center = true;
+        this._type = jsCanvasNinja.Utility._CENTER;
         this.radius = radius;
 
         this.graphics = new createjs.Graphics().beginFill(this.color).drawCircle(0, 0, this.radius).endFill();
