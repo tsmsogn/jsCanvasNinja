@@ -12,7 +12,7 @@ $(function () {
 
     new createjs.Ticker.addListener(window);
 
-    $("#checkbox").button();
+    $("#mode").buttonset();
     $("#insert").buttonset();
     $(".dialog").dialog({resizable:false});
     $("button").button();
@@ -108,82 +108,19 @@ $(function () {
         }
     });
 
-    // Insert
-    $("#button_bitmap, #button_text, #button_line, #button_circle, #button_triangle, #button_rect, #button_ellipse, #button_polystar, #button_roundrect").click(function () {
-        var target;
-        var value = $(this).text().toString().toLowerCase();
-        var red = $('#red').slider('value');
-        var green = $('#green').slider('value');
-        var blue = $('#blue').slider('value');
-        var alpha = $('#alpha').slider('value');
-        var color = createjs.Graphics.getRGB(red, green, blue, alpha);
-        var point = new createjs.Point(canvas.width / 2, canvas.height / 2);
+    // Mode
+    $("input[name=mode]").change(function () {
+        var value = $(this).val().toString().toLowerCase();
 
         switch (value) {
-            case "bitmap":
-                target = new jsCanvasNinja.Bitmap($("#image")[0], point.x, point.y, $("#image")[0].width, $("#image")[0].height);
+            case "select":
+            case "insert":
+                stage.setMode(value);
                 break;
-            case "text":
-                target = new jsCanvasNinja.Text("Hello World", "bold 40px Arial", color, point.x, point.y);
-                break;
-            case "line":
-                target = new jsCanvasNinja.Line(point.x, point.y, 100, 150, color);
-                break;
-            case "circle":
-                target = new jsCanvasNinja.Circle(point.x, point.y, 60, color);
-                break;
-            case "triangle":
-                target = new jsCanvasNinja.Triangle(point.x, point.y, 60, 90, color);
-                break;
-            case "rect":
-                target = new jsCanvasNinja.Rect(point.x, point.y, 20, 40, color);
-                break;
-            case "ellipse":
-                target = new jsCanvasNinja.Ellipse(point.x, point.y, 30, 60, color);
-                break;
-            case "polystar":
-                target = new jsCanvasNinja.PolyStar(point.x, point.y, 60, 5, 0.6, -90, color);
-                break;
-            case "roundrect":
-                target = new jsCanvasNinja.RoundRect(point.x, point.y, 20, 40, 5, color);
-                break;
-            default :
+            default:
                 break;
         }
 
-        // Implements callbacks
-        stage.onSelect = function (target, e) {
-            if (currentTarget.id !== target.id) {
-                if (typeof target.getColor === 'function') {
-                    var color = target.getColor();
-                    color.toString().match(/^rgba\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3}),\s*(1|(?:0\.\d+))\)$/);
-                    var red = RegExp.$1;
-                    var green = RegExp.$2;
-                    var blue = RegExp.$3;
-                    var alpha = RegExp.$4;
-                    $("#red").slider("value", red);
-                    $("#green").slider("value", green);
-                    $("#blue").slider("value", blue);
-                    $("#alpha").slider("value", alpha);
-                    // Update current target
-                    currentTarget = target;
-                }
-            }
-        };
-
-        // Implements before Stage#toDataURL
-        stage.beforeToDataURL = function () {
-            for (var i = 0; i < this._frame._elements.length; i++) {
-                var child = this._frame._elements[i];
-                this.removeChild(child);
-            }
-            this.update();
-        };
-
-        stage.bindToframe(stage.addChild(target));
-
-        // Fire events
-        stage.update(true);
     });
 
     // Rotation
@@ -258,7 +195,80 @@ function handleChange() {
 }
 
 function handleOnStageMouseDown(e) {
-    console.log(e);
+    var target;
+    var value = $('input[name=radio]:checked').val().toString().toLocaleLowerCase();
+    var red = $('#red').slider('value');
+    var green = $('#green').slider('value');
+    var blue = $('#blue').slider('value');
+    var alpha = $('#alpha').slider('value');
+    var color = createjs.Graphics.getRGB(red, green, blue, alpha);
+    var point = new createjs.Point(e.stageX, e.stageY);
+
+    switch (value) {
+        case "bitmap":
+            target = new jsCanvasNinja.Bitmap($("#image")[0], point.x, point.y, $("#image")[0].width, $("#image")[0].height);
+            break;
+        case "text":
+            target = new jsCanvasNinja.Text("Hello World", "bold 40px Arial", color, point.x, point.y);
+            break;
+        case "line":
+            target = new jsCanvasNinja.Line(point.x, point.y, 100, 150, color);
+            break;
+        case "circle":
+            target = new jsCanvasNinja.Circle(point.x, point.y, 60, color);
+            break;
+        case "triangle":
+            target = new jsCanvasNinja.Triangle(point.x, point.y, 60, 90, color);
+            break;
+        case "rect":
+            target = new jsCanvasNinja.Rect(point.x, point.y, 20, 40, color);
+            break;
+        case "ellipse":
+            target = new jsCanvasNinja.Ellipse(point.x, point.y, 30, 60, color);
+            break;
+        case "polystar":
+            target = new jsCanvasNinja.PolyStar(point.x, point.y, 60, 5, 0.6, -90, color);
+            break;
+        case "roundrect":
+            target = new jsCanvasNinja.RoundRect(point.x, point.y, 20, 40, 5, color);
+            break;
+        default :
+            break;
+    }
+
+    // Implements callbacks
+    stage.onSelect = function (target, e) {
+        if (currentTarget.id !== target.id) {
+            if (typeof target.getColor === 'function') {
+                var color = target.getColor();
+                color.toString().match(/^rgba\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3}),\s*(1|(?:0\.\d+))\)$/);
+                var red = RegExp.$1;
+                var green = RegExp.$2;
+                var blue = RegExp.$3;
+                var alpha = RegExp.$4;
+                $("#red").slider("value", red);
+                $("#green").slider("value", green);
+                $("#blue").slider("value", blue);
+                $("#alpha").slider("value", alpha);
+                // Update current target
+                currentTarget = target;
+            }
+        }
+    };
+
+    // Implements before Stage#toDataURL
+    stage.beforeToDataURL = function () {
+        for (var i = 0; i < this._frame._elements.length; i++) {
+            var child = this._frame._elements[i];
+            this.removeChild(child);
+        }
+        this.update();
+    };
+
+    stage.bindToframe(stage.addChild(target));
+
+    // Fire events
+    stage.update(true);
 }
 
 function handleOnUndoRedo(obj) {

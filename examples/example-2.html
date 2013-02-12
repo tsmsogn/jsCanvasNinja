@@ -50,20 +50,28 @@
 <body>
 <canvas id="canvas" width="900" height="900"></canvas>
 <div class="dialog" title="Mode">
-    <input type="checkbox" id="checkbox"><label for="checkbox">On</label>
+    <div id="mode">
+        <input type="radio" id="radio_mode_select" name="mode" value="select"><label
+            for="radio_mode_select">Select</label>
+        <input type="radio" id="radio_mode_insert" name="mode" value="insert" checked><label for="radio_mode_insert">Insert</label>
+    </div>
 </div>
 <div class="dialog" title="Insert">
     <img id="image" src="assets/daisy.png">
     <div id="insert">
-        <input type="radio" id="radio_bitmap" name="radio" checked><label for="radio_bitmap">Bitmap</label>
-        <input type="radio" id="radio_text" name="radio"><label for="radio_text">Text</label>
-        <input type="radio" id="radio_line" name="radio"><label for="radio_line">Line</label>
-        <input type="radio" id="radio_circle" name="radio"><label for="radio_circle">Circle</label>
-        <input type="radio" id="radio_triangle" name="radio"><label for="radio_triangle">Triangle</label>
-        <input type="radio" id="radio_rect" name="radio"><label for="radio_rect">Rect</label>
-        <input type="radio" id="radio_ellipse" name="radio"><label for="radio_ellipse">Ellipse</label>
-        <input type="radio" id="radio_polystar" name="radio"><label for="radio_polystar">PolyStar</label>
-        <input type="radio" id="radio_roundrect" name="radio"><label for="radio_roundrect">RoundRect</label>
+        <input type="radio" id="radio_bitmap" name="radio" value="bitmap" checked><label
+            for="radio_bitmap">Bitmap</label>
+        <input type="radio" id="radio_text" value="text" name="radio"><label for="radio_text">Text</label>
+        <input type="radio" id="radio_line" value="line" name="radio"><label for="radio_line">Line</label>
+        <input type="radio" id="radio_circle" value="circle" name="radio"><label for="radio_circle">Circle</label>
+        <input type="radio" id="radio_triangle" value="triangle" name="radio"><label
+            for="radio_triangle">Triangle</label>
+        <input type="radio" id="radio_rect" value="rect" name="radio"><label for="radio_rect">Rect</label>
+        <input type="radio" id="radio_ellipse" value="ellipse" name="radio"><label for="radio_ellipse">Ellipse</label>
+        <input type="radio" id="radio_polystar" value="polystar" name="radio"><label
+            for="radio_polystar">PolyStar</label>
+        <input type="radio" id="radio_roundrect" value="roundrect" name="radio"><label
+            for="radio_roundrect">RoundRect</label>
     </div>
 </div>
 <div class="dialog" title="Arrange">
