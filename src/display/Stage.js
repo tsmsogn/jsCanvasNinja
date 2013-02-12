@@ -271,66 +271,66 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
 
                                 // @TODO Keep aspect ratio
                                 switch (name) {
-                                    case "TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
+                                    case 'TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = ((m1.tx) ? -m1.tx / Math.abs(m1.tx) : 1) * Math.max.apply(null, [Math.abs(m1.tx), Math.abs(m1.ty)]) / object.width * 2;
                                         object.scaleY = ((m1.ty) ? -m1.ty / Math.abs(m1.ty) : 1) * Math.max.apply(null, [Math.abs(m1.tx), Math.abs(m1.ty)]) / object.height * 2;
                                         break;
-                                    case "TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                                    case 'TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = -m1.tx / object.width * 2;
                                         object.scaleY = -m1.ty / object.height * 2;
                                         break;
-                                    case "TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
+                                    case 'TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = ((m1.tx) ? m1.tx / Math.abs(m1.tx) : 1) * Math.max.apply(null, [Math.abs(m1.tx), Math.abs(m1.ty)]) / object.width * 2;
                                         object.scaleY = ((m1.ty) ? -m1.ty / Math.abs(m1.ty) : 1) * Math.max.apply(null, [Math.abs(m1.tx), Math.abs(m1.ty)]) / object.height * 2;
                                         break;
-                                    case "TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                                    case 'TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = m1.tx / object.width * 2;
                                         object.scaleY = -m1.ty / object.height * 2;
                                         break;
-                                    case "BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
+                                    case 'BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = ((m1.tx) ? m1.tx / Math.abs(m1.tx) : 1) * Math.max.apply(null, [Math.abs(m1.tx), Math.abs(m1.ty)]) / object.width * 2;
                                         object.scaleY = ((m1.ty) ? m1.ty / Math.abs(m1.ty) : 1) * Math.max.apply(null, [Math.abs(m1.tx), Math.abs(m1.ty)]) / object.height * 2;
                                         break;
-                                    case "BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                                    case 'BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = m1.tx / object.width * 2;
                                         object.scaleY = m1.ty / object.height * 2;
                                         break;
-                                    case "BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
+                                    case 'BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = ((m1.tx) ? -m1.tx / Math.abs(m1.tx) : 1) * Math.max.apply(null, [Math.abs(m1.tx), Math.abs(m1.ty)]) / object.width * 2;
                                         object.scaleY = ((m1.ty) ? m1.ty / Math.abs(m1.ty) : 1) * Math.max.apply(null, [Math.abs(m1.tx), Math.abs(m1.ty)]) / object.height * 2;
                                         break;
-                                    case "BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                                    case 'BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = -m1.tx / object.width * 2;
                                         object.scaleY = m1.ty / object.height * 2;
                                         break;
-                                    case "TOP_LEFT_HANDLE_FOR_ROTATION":
-                                    case "TOP_RIGHT_HANDLE_FOR_ROTATION":
-                                    case "BOTTOM_RIGHT_HANDLE_FOR_ROTATION":
-                                    case "BOTTOM_LEFT_HANDLE_FOR_ROTATION":
+                                    case 'TOP_LEFT_HANDLE_FOR_ROTATION':
+                                    case 'TOP_RIGHT_HANDLE_FOR_ROTATION':
+                                    case 'BOTTOM_RIGHT_HANDLE_FOR_ROTATION':
+                                    case 'BOTTOM_LEFT_HANDLE_FOR_ROTATION':
                                         var m2 = new createjs.Matrix2D(), m3 = new createjs.Matrix2D();
                                         // Get base point m2.tx, m2.ty
                                         m2.translate((name.match(new RegExp('LEFT'))) ? -object.width * object.scaleX * 0.5 : object.width * object.scaleX * 0.5, (name.match(new RegExp('TOP'))) ? -object.height * object.scaleY * 0.5 : object.height * object.scaleY * 0.5); // @TODO
@@ -348,7 +348,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
 
                                 // @TODO Keep aspect ratio
                                 switch (name) {
-                                    case "TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
+                                    case 'TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D();
                                         // Matrix for bottomRight x, y
                                         m1.translate(object.width * object.scaleX, object.height * object.scaleY);
@@ -365,7 +365,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                                         object.x = m3.tx + m1.tx;
                                         object.y = m3.ty + m1.ty;
                                         break;
-                                    case "TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                                    case 'TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D();
                                         // Matrix for bottomRight x, y
                                         m1.translate(object.width * object.scaleX, object.height * object.scaleY);
@@ -378,7 +378,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                                         object.x = evt.stageX + offset.x;
                                         object.y = evt.stageY + offset.y;
                                         break;
-                                    case "TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
+                                    case 'TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D(), m3 = new createjs.Matrix2D();
                                         // Matrix for bottomLeft x, y
                                         m1.translate(0, object.height * object.scaleY);
@@ -395,7 +395,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                                         object.x = m3.tx + m1.tx;
                                         object.y = m3.ty + m1.ty;
                                         break;
-                                    case "TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                                    case 'TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D(), m3 = new createjs.Matrix2D();
                                         // Matrix for bottomLeft x, y
                                         m1.translate(0, object.height * object.scaleY);
@@ -412,7 +412,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                                         object.x = m3.tx + m1.tx;
                                         object.y = m3.ty + m1.ty;
                                         break;
-                                    case "BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
+                                    case 'BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
@@ -420,14 +420,14 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                                         object.scaleX = ((m1.tx) ? m1.tx / Math.abs(m1.tx) : 1) * scale;
                                         object.scaleY = ((m1.ty) ? m1.ty / Math.abs(m1.ty) : 1) * scale;
                                         break;
-                                    case "BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                                    case 'BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D();
                                         m1.translate(evt.stageX + offset.x - object.x, evt.stageY + offset.y - object.y);
                                         m1.rotate(-object.rotation * Math.PI / 180);
                                         object.scaleX = m1.tx / object.width;
                                         object.scaleY = m1.ty / object.height;
                                         break;
-                                    case "BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
+                                    case 'BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D(), m3 = new createjs.Matrix2D();
                                         // Matrix for topRight x, y
                                         m1.translate(object.width * object.scaleX, 0);
@@ -444,7 +444,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                                         object.x = m3.tx + m1.tx;
                                         object.y = m3.ty + m1.ty;
                                         break;
-                                    case "BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                                    case 'BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                         var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D(), m3 = new createjs.Matrix2D();
                                         // Matrix for topRight x, y
                                         m1.translate(object.width * object.scaleX, 0);
@@ -461,10 +461,10 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                                         object.x = m3.tx + m1.tx;
                                         object.y = m3.ty + m1.ty;
                                         break;
-                                    case "TOP_LEFT_HANDLE_FOR_ROTATION":
-                                    case "TOP_RIGHT_HANDLE_FOR_ROTATION":
-                                    case "BOTTOM_RIGHT_HANDLE_FOR_ROTATION":
-                                    case "BOTTOM_LEFT_HANDLE_FOR_ROTATION":
+                                    case 'TOP_LEFT_HANDLE_FOR_ROTATION':
+                                    case 'TOP_RIGHT_HANDLE_FOR_ROTATION':
+                                    case 'BOTTOM_RIGHT_HANDLE_FOR_ROTATION':
+                                    case 'BOTTOM_LEFT_HANDLE_FOR_ROTATION':
                                         // @TODO
                                         // Get center point m1.tx, m1.ty
                                         var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D(), m3 = new createjs.Matrix2D();

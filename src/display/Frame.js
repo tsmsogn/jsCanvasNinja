@@ -39,11 +39,11 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this._options = options || {};
         this._elements = [];
 
-        var color = this._options.color || "rgba(125, 125, 125, 0.6)";
+        var color = this._options.color || 'rgba(125, 125, 125, 0.6)';
         var radius = this._options.radius || 10;
 
         // Create rotation circles
-        var rotationCircles = ["TOP_LEFT_HANDLE_FOR_ROTATION", "TOP_RIGHT_HANDLE_FOR_ROTATION", "BOTTOM_RIGHT_HANDLE_FOR_ROTATION", "BOTTOM_LEFT_HANDLE_FOR_ROTATION"];
+        var rotationCircles = ['TOP_LEFT_HANDLE_FOR_ROTATION', 'TOP_RIGHT_HANDLE_FOR_ROTATION', 'BOTTOM_RIGHT_HANDLE_FOR_ROTATION', 'BOTTOM_LEFT_HANDLE_FOR_ROTATION'];
         for (var i = 0; i < rotationCircles.length; i++) {
             var name = rotationCircles[i];
             var element = new createjs.Shape(new createjs.Graphics().beginFill('rgba(255, 0, 0, 1)').drawCircle(0, 0, radius + 5).endFill());
@@ -52,7 +52,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         }
 
         // Create resize circles
-        var resizeCircles = (scaleType) ? ["TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE", "TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE", "BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE", "BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE"] : ["TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE", "TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE", "BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE", "BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE"];
+        var resizeCircles = (scaleType) ? ['TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE', 'TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE', 'BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE', 'BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE'] : ['TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE', 'TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE', 'BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE', 'BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE'];
         for (var i = 0; i < resizeCircles.length; i++) {
             var name = resizeCircles[i];
             var element = new createjs.Shape(new createjs.Graphics().beginFill('rgba(255, 255, 255, 1)').drawCircle(0, 0, radius).endFill());
@@ -104,30 +104,30 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                 switch (jsCanvasNinja.Utility.isCentralCoordinate(this)) {
                     case true:
                         switch (name) {
-                            case "TOP_LEFT_HANDLE_FOR_ROTATION":
-                            case "TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
-                            case "TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                            case 'TOP_LEFT_HANDLE_FOR_ROTATION':
+                            case 'TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
+                            case 'TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                 m1.translate(-this.width * 0.5 * this.scaleX, -this.height * 0.5 * this.scaleY);
                                 m1.rotate(this.rotation * Math.PI / 180);
                                 m1.prependTransform(this.x, this.y, 1, 1, 0, 0, 0, 0, 0);
                                 break;
-                            case "TOP_RIGHT_HANDLE_FOR_ROTATION":
-                            case "TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
-                            case "TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                            case 'TOP_RIGHT_HANDLE_FOR_ROTATION':
+                            case 'TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
+                            case 'TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                 m1.translate(this.width * 0.5 * this.scaleX, -this.height * 0.5 * this.scaleY);
                                 m1.rotate(this.rotation * Math.PI / 180);
                                 m1.prependTransform(this.x, this.y, 1, 1, 0, 0, 0, 0, 0);
                                 break;
-                            case "BOTTOM_RIGHT_HANDLE_FOR_ROTATION":
-                            case "BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
-                            case "BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                            case 'BOTTOM_RIGHT_HANDLE_FOR_ROTATION':
+                            case 'BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
+                            case 'BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                 m1.translate(this.width * 0.5 * this.scaleX, this.height * 0.5 * this.scaleY);
                                 m1.rotate(this.rotation * Math.PI / 180);
                                 m1.prependTransform(this.x, this.y, 1, 1, 0, 0, 0, 0, 0);
                                 break;
-                            case "BOTTOM_LEFT_HANDLE_FOR_ROTATION":
-                            case "BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
-                            case "BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                            case 'BOTTOM_LEFT_HANDLE_FOR_ROTATION':
+                            case 'BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
+                            case 'BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                 m1.translate(-this.width * 0.5 * this.scaleX, this.height * 0.5 * this.scaleY);
                                 m1.rotate(this.rotation * Math.PI / 180);
                                 m1.prependTransform(this.x, this.y, 1, 1, 0, 0, 0, 0, 0);
@@ -138,28 +138,28 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                         break;
                     case false:
                         switch (name) {
-                            case "TOP_LEFT_HANDLE_FOR_ROTATION":
-                            case "TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
-                            case "TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                            case 'TOP_LEFT_HANDLE_FOR_ROTATION':
+                            case 'TOP_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
+                            case 'TOP_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                 m1.appendTransform(this.x, this.y, 1, 1, 0, 0, 0, 0, 0);
                                 break;
-                            case "TOP_RIGHT_HANDLE_FOR_ROTATION":
-                            case "TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
-                            case "TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                            case 'TOP_RIGHT_HANDLE_FOR_ROTATION':
+                            case 'TOP_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
+                            case 'TOP_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                 m1.translate(this.width * this.scaleX, 0);
                                 m1.rotate(this.rotation * Math.PI / 180);
                                 m1.prependTransform(this.x, this.y, 1, 1, 0, 0, 0, 0, 0);
                                 break;
-                            case "BOTTOM_RIGHT_HANDLE_FOR_ROTATION":
-                            case "BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
-                            case "BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                            case 'BOTTOM_RIGHT_HANDLE_FOR_ROTATION':
+                            case 'BOTTOM_RIGHT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
+                            case 'BOTTOM_RIGHT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                 m1.translate(this.width * this.scaleX, this.height * this.scaleY);
                                 m1.rotate(this.rotation * Math.PI / 180);
                                 m1.prependTransform(this.x, this.y, 1, 1, 0, 0, 0, 0, 0);
                                 break;
-                            case "BOTTOM_LEFT_HANDLE_FOR_ROTATION":
-                            case "BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE":
-                            case "BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE":
+                            case 'BOTTOM_LEFT_HANDLE_FOR_ROTATION':
+                            case 'BOTTOM_LEFT_HANDLE_FOR_KEEP_ASPECT_RESIZE':
+                            case 'BOTTOM_LEFT_HANDLE_FOR_NON_KEEP_ASPECT_RESIZE':
                                 m1.translate(0, this.height * this.scaleY);
                                 m1.rotate(this.rotation * Math.PI / 180);
                                 m1.prependTransform(this.x, this.y, 1, 1, 0, 0, 0, 0, 0);
