@@ -29,4 +29,4 @@ You can also contribute code:
 3. Create a branch for your feature: git checkout -b your_branch_name
 4. Write and delete code and commit as often as you can: git commit -am "A descriptive message"
 5. Push the branch to your fork: git push origin your_branch_name
-6. Create a pull request on GitHub (click the Pull request button on your fork page)
+6. Create a pull request on GitHub (click the **Pull request** button on your fork page)
