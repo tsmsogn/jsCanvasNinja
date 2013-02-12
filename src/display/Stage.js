@@ -225,7 +225,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
 
         if (object) {
 
-            var scale = {scaleX:object.scaleX, scaleY:object.scaleY};
+            var before = {rotation:object.rotation, scaleX:object.scaleX, scaleY:object.scaleY};
             this._frame = new jsCanvasNinja.Frame(this.getScaleType());
             var elements = this._frame.getElements();
 
@@ -478,7 +478,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
                         }
 
                         e.onMouseUp = function (evt) {
-                            if (scale.scaleX !== object.scaleX || scale.scaleY !== object.scaleY) {
+                            if (before.rotation !== object.rotation || before.scaleX !== object.scaleX || before.scaleY !== object.scaleY) {
                                 self.update(true);
                             }
                         }
