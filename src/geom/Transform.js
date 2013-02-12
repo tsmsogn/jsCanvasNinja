@@ -50,9 +50,12 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
 
     /**
      *
-     * @param scale
+     * @param scaleX
+     * @param scaleY
      */
-    Transform.scale = function (scale) {
+    Transform.scale = function (scaleX, scaleY) {
+        scaleX = (scaleX === null || scaleX === undefined) ? this.scaleX : scaleX;
+        scaleY = (scaleY === null || scaleY === undefined) ? this.scaleX : scaleX;
         if (!jsCanvasNinja.Utility.isCentralCoordinate(this)) {
             var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D();
             // Get center position
@@ -60,14 +63,14 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
             m1.rotate(this.rotation * Math.PI / 180);
             m1.translate(this.x, this.y);
             // Get next position
-            m2.translate(-this.width * scale.scaleX * 0.5, -this.height * scale.scaleY * 0.5);
+            m2.translate(-this.width * scaleX * 0.5, -this.height * scaleY * 0.5);
             m2.rotate(this.rotation * Math.PI / 180);
             m2.translate(m1.tx, m1.ty);
             this.x = m2.tx;
             this.y = m2.ty;
         }
-        this.scaleX = scale.scaleX;
-        this.scaleY = scale.scaleY;
+        this.scaleX = scaleX;
+        this.scaleY = scaleY;
     };
 
     jsCanvasNinja.Transform = Transform;

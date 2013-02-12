@@ -212,11 +212,11 @@ $(function () {
         switch (value) {
             case "+":
                 var target = stage.getTarget();
-                jsCanvasNinja.Transform.scale.call(target, {scaleX:target.scaleX + 0.1, scaleY:target.scaleY + 0.1});
+                jsCanvasNinja.Transform.scale.call(target, target.scaleX + 0.1, target.scaleY + 0.1);
                 break;
             case "-":
                 var target = stage.getTarget();
-                jsCanvasNinja.Transform.scale.call(target, {scaleX:target.scaleX - 0.1, scaleY:target.scaleY - 0.1});
+                jsCanvasNinja.Transform.scale.call(target, target.scaleX - 0.1, target.scaleY - 0.1);
                 break;
             default :
                 break;
