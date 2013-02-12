@@ -3,7 +3,7 @@
 
 jsCanvasNinja is canvas library can transform, undo and redo etc.
 
-## Install
+## Installation
 
 Dependencies:
 
