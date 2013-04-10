@@ -17,8 +17,8 @@ EaselJS 0.5.0 or newer
 
 ## Demos
 
-- <http://tsmsogn.com/downloads/code/jsCanvasNinja/examples/example-1.html>
-- <http://tsmsogn.com/downloads/code/jsCanvasNinja/examples/example-2.html>
+- <http://tsmsogn.github.com/downloads/code/jsCanvasNinja/examples/example-1.html>
+- <http://tsmsogn.github.com/downloads/code/jsCanvasNinja/examples/example-2.html>
 
 ## Contributing
 
