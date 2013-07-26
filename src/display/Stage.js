@@ -46,7 +46,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         this._options = options || {};
         // Initialize
         this.setMode(this._options.mode);
-        this.setScaleType(false);
+        this.setScaleType(Boolean(this._options.scaleType));
         this.didCommands = [];
         this.undidCommands = [];
         this._target = null;
