@@ -84,7 +84,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
             var children = [];
             for (var i = 0; i < self.getNumChildren(); i++) {
                 var child = self.getChildAt(i);
-                if (!self._frame.isElement(child)) {
+                if (!self._frame || !self._frame.isElement(child)) {
                     children.push(child.clone());
                 }
             }
