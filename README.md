@@ -1,19 +1,13 @@
 
 # jsCanvasNinja
 
-jsCanvasNinja is canvas library can transform, undo and redo etc.
+jsCanvasNinja is editor tool library for HTML canvas. This library make you enable to transform (rotate, scale) with GUI handle, and undo/redo canvas objects.
 
 ## Installation
 
 Dependencies:
 
-EaselJS 0.5.0 or newer
-
-## Features
-
-- Rotate
-- Scale
-- Undo/Redo
+EaselJS 0.5.0
 
 ## Demos
 
