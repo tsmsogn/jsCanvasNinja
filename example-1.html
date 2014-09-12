@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/dark-hive/jquery-ui-1.9.2.custom.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <style>
+        #canvas {
+            border: solid 1px #ffffff;
+        }
+
+        #red .ui-slider-range {
+            background: #ef2929;
+        }
+
+        #green .ui-slider-range {
+            background: #8ae234;
+        }
+
+        #blue .ui-slider-range {
+            background: #729fcf;
+        }
+
+        #alpha .ui-slider-range {
+            background: #ffffff;
+        }
+    </style>
+    <script src="js/jquery-1.8.3.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="../lib/easeljs-0.5.0.min.js"></script>
+    <script src="../lib/jscanvasninja.min.js"></script>
+    <script src="js/example-1.js"></script>
+</head>
+<body>
+<canvas id="canvas" width="900" height="900"></canvas>
+<div class="dialog" title="Insert">
+    <button id="button_bitmap">Bitmap</button>
+    <img id="image" src="assets/daisy.png">
+    <button id="button_text">Text</button>
+    <button id="button_line">Line</button>
+    <button id="button_circle">Circle</button>
+    <button id="button_triangle">Triangle</button>
+    <button id="button_rect">Rect</button>
+    <button id="button_ellipse">Ellipse</button>
+    <button id="button_polystar">PolyStar</button>
+    <button id="button_roundrect">RoundRect</button>
+</div>
+<div class="dialog" title="Arrange">
+    <button id="button_bring_to_front">Bring To Front</button>
+    <button id="button_send_to_back">Send To Back</button>
+    <button id="button_bring_forward">Bring Forward</button>
+    <button id="button_send_backward">Send Backward</button>
+</div>
+<div class="dialog" title="Rotate">
+    <button id="button_clockwise">Clockwise</button>
+    <button id="button_counterclockwise">Counterclockwise</button>
+</div>
+<div class="dialog" title="Scale">
+    <button id="button_scale_plus">+</button>
+    <button id="button_scale_minus">-</button>
+</div>
+<div class="dialog" title="Edit">
+    <button id="button_undo">Undo</button>
+    <button id="button_redo">Redo</button>
+    <button id="button_delete">Delete</button>
+    <button id="button_reset">Reset</button>
+</div>
+<div class="dialog" title="Color Picker">
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="alpha"></div>
+</div>
+<div class="dialog" title="File">
+    <button id="button_png">Export to png image</button>
+</div>
+<div class="dialog" title="Test">
+    <button id="button_clone">Clone</button>
+</div>
+</body>
+</html>
