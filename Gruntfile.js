@@ -54,6 +54,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['uglify']);
 
   // Test task(s).
-  grunt.registerTask('test', ['jshint']);
+  grunt.registerTask('test', ['jasmine']);
 
 };
