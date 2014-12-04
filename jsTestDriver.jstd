@@ -1,8 +1,0 @@
-load:
-  - http://raw.github.com/andrewplummer/Sugar/master/release/sugar.min.js
-  - lib/*.js
-  - src/utils/*.js
-  - src/display/*.js
-
-test:
-  - src-test/*.js
