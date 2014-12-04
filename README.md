@@ -1,6 +1,8 @@
 
 # jsCanvasNinja
 
+[![Build Status](https://travis-ci.org/tsmsogn/jsCanvasNinja.svg?branch=master)](https://travis-ci.org/tsmsogn/jsCanvasNinja)
+
 jsCanvasNinja is editor tool library for HTML canvas. This library make you enable to transform (rotate, scale) with GUI handle, and undo/redo canvas objects.
 
 ## Installation
