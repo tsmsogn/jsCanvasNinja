@@ -25,13 +25,20 @@ module.exports = function(grunt) {
         ],
         dest: 'lib/jscanvasninja.min.js'
       }
+    },
+    jshint: {
+      all: ['Gruntfile.js', 'src/**/*.js', 'src-test/**/*.js']
     }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
+  // Load the plugin that provides the "jshint" task.
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify', 'jshint']);
+
 
 };
