@@ -57,8 +57,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @return {*}
      */
     Utility.hasHeight = function (target) {
-        if (!target) return;
-        return target.hasOwnProperty('height') && !isNaN(target.height);
+        return (target) ? target.hasOwnProperty('height') && !isNaN(target.height) : false;
     };
 
     /**
@@ -67,8 +66,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      * @return {*}
      */
     Utility.hasWidth = function (target) {
-        if (!target) return;
-        return target.hasOwnProperty('width') && !isNaN(target.width);
+        return (target) ? target.hasOwnProperty('width') && !isNaN(target.width) : false;
     };
 
     /**
