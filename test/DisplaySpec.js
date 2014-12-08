@@ -6,19 +6,19 @@ describe("Bitmap", function () {
     });
 
     it("should have not color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(false);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(false);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should not be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(false);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
     describe("cloned", function () {
@@ -35,19 +35,19 @@ describe("Bitmap", function () {
         });
 
         it("should have not color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(false);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(false);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should not be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(false);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(false);
         });
 
     });
@@ -62,19 +62,19 @@ describe("Text", function () {
     });
 
     it("should have color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(true);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should not be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(false);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
     describe("cloned", function () {
@@ -91,19 +91,19 @@ describe("Text", function () {
         });
 
         it("should have color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should not be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(false);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(false);
         });
 
     });
@@ -118,19 +118,19 @@ describe("Line", function () {
     });
 
     it("should have color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(true);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should not be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(false);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
     describe("cloned", function () {
@@ -147,19 +147,19 @@ describe("Line", function () {
         });
 
         it("should have color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should not be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(false);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(false);
         });
 
     });
@@ -174,19 +174,19 @@ describe("Circle", function () {
     });
 
     it("should have color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(true);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
     });
 
     describe("cloned", function () {
@@ -203,19 +203,19 @@ describe("Circle", function () {
         });
 
         it("should have color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(true);
         });
 
     });
@@ -230,19 +230,19 @@ describe("Triangle", function () {
     });
 
     it("should have color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(true);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
     });
 
     describe("cloned", function () {
@@ -259,19 +259,19 @@ describe("Triangle", function () {
         });
 
         it("should have color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(true);
         });
 
     });
@@ -286,19 +286,19 @@ describe("Rect", function () {
     });
 
     it("should have color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(true);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should not be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(false);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
     describe("cloned", function () {
@@ -315,19 +315,19 @@ describe("Rect", function () {
         });
 
         it("should have color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should not be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(false);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(false);
         });
 
     });
@@ -342,19 +342,19 @@ describe("Ellipse", function () {
     });
 
     it("should have color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(true);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should not be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(false);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
     describe("cloned", function () {
@@ -371,19 +371,19 @@ describe("Ellipse", function () {
         });
 
         it("should have color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should not be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(false);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(false);
         });
 
     });
@@ -398,19 +398,19 @@ describe("PolyStar", function () {
     });
 
     it("should have color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(true);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
     });
 
     describe("cloned", function () {
@@ -427,19 +427,19 @@ describe("PolyStar", function () {
         });
 
         it("should have color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(true);
         });
 
     });
@@ -454,19 +454,19 @@ describe("RoundRect", function () {
     });
 
     it("should have color property.", function () {
-        expect(jsCanvasNinja.Utility.hasColor(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasColor(original)).toEqual(true);
     });
 
     it("should have height property.", function () {
-        expect(jsCanvasNinja.Utility.hasHeight(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasHeight(original)).toEqual(true);
     });
 
     it("should have width property.", function () {
-        expect(jsCanvasNinja.Utility.hasWidth(original)).toBe(true);
+        expect(jsCanvasNinja.Utility.hasWidth(original)).toEqual(true);
     });
 
     it("should not be central coordinate object.", function () {
-        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toBe(false);
+        expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
     describe("cloned", function () {
@@ -483,19 +483,19 @@ describe("RoundRect", function () {
         });
 
         it("should have color property.", function () {
-            expect(jsCanvasNinja.Utility.hasColor(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
         it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
         });
 
         it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toBe(true);
+            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
         });
 
         it("should not be central coordinate object.", function () {
-            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toBe(false);
+            expect(jsCanvasNinja.Utility.isCentralCoordinate(cloned)).toEqual(false);
         });
 
     });
