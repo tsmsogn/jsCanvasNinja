@@ -38,12 +38,12 @@ describe("Bitmap", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(false);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should not be central coordinate object.", function () {
@@ -94,12 +94,12 @@ describe("Text", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should not be central coordinate object.", function () {
@@ -150,12 +150,12 @@ describe("Line", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should not be central coordinate object.", function () {
@@ -206,12 +206,12 @@ describe("Circle", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should be central coordinate object.", function () {
@@ -262,12 +262,12 @@ describe("Triangle", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should be central coordinate object.", function () {
@@ -318,12 +318,12 @@ describe("Rect", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should not be central coordinate object.", function () {
@@ -374,12 +374,12 @@ describe("Ellipse", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should not be central coordinate object.", function () {
@@ -430,12 +430,12 @@ describe("PolyStar", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should be central coordinate object.", function () {
@@ -486,12 +486,12 @@ describe("RoundRect", function () {
             expect(jsCanvasNinja.Utility.hasColor(cloned)).toEqual(true);
         });
 
-        it("should have height property.", function () {
-            expect(jsCanvasNinja.Utility.hasHeight(cloned)).toEqual(true);
+        it("should have same height.", function () {
+            expect(cloned.height).toEqual(original.height);
         });
 
-        it("should have width property.", function () {
-            expect(jsCanvasNinja.Utility.hasWidth(cloned)).toEqual(true);
+        it("should have same width.", function () {
+            expect(cloned.width).toEqual(original.width);
         });
 
         it("should not be central coordinate object.", function () {
