@@ -1,6 +1,12 @@
-describe("jsCanvasNinja.Utility::", function () {
+describe("jsCanvasNinja.Utility", function () {
 
-    describe("isText()", function () {
+    it("should throw exception when be instantiated.", function () {
+        expect(function() {
+            new jsCanvasNinja.Utility();
+        }).toThrow();
+    });
+
+    describe("::isText()", function () {
 
         it("should return true with object having text property.", function () {
             expect(jsCanvasNinja.Utility.isText({text: "foo"})).toBeTruthy();
@@ -16,7 +22,7 @@ describe("jsCanvasNinja.Utility::", function () {
 
     });
 
-    describe("hasColor()", function () {
+    describe("::hasColor()", function () {
 
         it("should return true with object having color property.", function () {
             expect(jsCanvasNinja.Utility.hasColor({color: "foo"})).toBeTruthy();
@@ -32,7 +38,7 @@ describe("jsCanvasNinja.Utility::", function () {
 
     });
 
-    describe("hasHeight()", function () {
+    describe("::hasHeight()", function () {
 
         it("should return true with object having valid height.", function () {
             expect(jsCanvasNinja.Utility.hasHeight({height: 1})).toBeTruthy();
@@ -52,7 +58,7 @@ describe("jsCanvasNinja.Utility::", function () {
 
     });
 
-    describe("hasWidth()", function () {
+    describe("::hasWidth()", function () {
 
         it("should return true with object having valid width.", function () {
             expect(jsCanvasNinja.Utility.hasWidth({width: 1})).toBeTruthy();
@@ -72,7 +78,7 @@ describe("jsCanvasNinja.Utility::", function () {
 
     });
 
-    describe("isCentralCoordinate()", function () {
+    describe("::isCentralCoordinate()", function () {
 
         it("should return true with object having center coordinate type.", function () {
             expect(jsCanvasNinja.Utility.isCentralCoordinate({_type: 1})).toBeTruthy();
