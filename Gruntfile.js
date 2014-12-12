@@ -30,13 +30,30 @@ module.exports = function(grunt) {
       all: ['Gruntfile.js', 'src/**/*.js', 'src-test/**/*.js']
     },
     jasmine: {
-      src: 'src/**/*.js',
-      options: {
-        specs: 'test/**/*Spec.js',
-        vendor: [
-          'https://raw.githubusercontent.com/CreateJS/EaselJS/release_v0.5.0/lib/easeljs-0.5.0.min.js',
-          'http://raw.github.com/andrewplummer/Sugar/master/release/sugar.min.js'
-        ]
+      all: {
+        src: 'src/**/*.js',
+        options: {
+          specs: 'test/**/*Spec.js',
+          vendor: [
+            'https://raw.githubusercontent.com/CreateJS/EaselJS/release_v0.5.0/lib/easeljs-0.5.0.min.js',
+            'http://raw.github.com/andrewplummer/Sugar/master/release/sugar.min.js'
+          ]
+        }
+      },
+      istanbul: {
+        src: '<%= jasmine.all.src %>',
+        options: {
+          vendor: '<%= jasmine.all.options.vendor %>',
+          specs: '<%= jasmine.all.options.specs %>',
+          template: require('grunt-template-jasmine-istanbul'),
+          templateOptions: {
+            coverage: 'coverage/json/coverage.json',
+            report: [
+              {type: 'html', options: {dir: 'coverage/html'}},
+              {type: 'text-summary'}
+            ]
+          }
+        }
       }
     }
   });
@@ -54,6 +71,6 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['uglify']);
 
   // Test task(s).
-  grunt.registerTask('test', ['jasmine']);
+  grunt.registerTask('test', ['jasmine:istanbul']);
 
 };
