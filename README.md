@@ -6,16 +6,14 @@
 
 jsCanvasNinja is editor tool library for HTML canvas. You can transform (rotate, scale etc...) objects with GUI handle, undo/redo objects.
 
-## Installation
-
-Dependencies:
-
-EaselJS 0.5.0
-
 ## Demos
 
 - <http://tsmsogn.github.io/jsCanvasNinja/example-1.html>
 - <http://tsmsogn.github.io/jsCanvasNinja/example-2.html>
+
+## Requirements
+
+EaselJS 0.5.0
 
 ## License
 
