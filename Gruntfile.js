@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     },
     jasmine: {
       all: {
-        src: 'src/**/*.js',
+        src: 'src/*.js',
         options: {
           specs: 'test/**/*Spec.js',
           vendor: [
@@ -70,6 +70,14 @@ module.exports = function(grunt) {
         // Target-specific LCOV coverage file
         src: 'coverage/lcov/lcov.info'
       }
+    },
+    jsdoc : {
+      dist : {
+        src: ['src/**/*.js'], 
+        options: {
+          destination: 'doc'
+        }
+      }
     }
   });
 
@@ -84,6 +92,9 @@ module.exports = function(grunt) {
 
   // Load the plugin that provides the "coveralls" task.
   grunt.loadNpmTasks('grunt-coveralls');
+
+  // Load the plugin that provides the "jsdoc" task.
+  grunt.loadNpmTasks('grunt-jsdoc');
 
   // Default task(s).
   grunt.registerTask('default', ['uglify']);
