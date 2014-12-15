@@ -77,6 +77,18 @@ describe("Text", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
+    it ("should have color accessor", function () {
+        var color = createjs.Graphics.getRGB(0, 0, 0, 1);
+        original.setColor(color)
+        expect(original.getColor()).toEqual(color);
+    });
+
+    it ("should have text accessor", function () {
+        var text = "foo";
+        original.setText(text)
+        expect(original.getText()).toEqual(text);
+    });
+
     describe("cloned", function () {
         var cloned;
 
@@ -131,6 +143,12 @@ describe("Line", function () {
 
     it("should not be central coordinate object.", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
+    });
+
+    it ("should have color accessor", function () {
+        var color = createjs.Graphics.getRGB(0, 0, 0, 1);
+        original.setColor(color)
+        expect(original.getColor()).toEqual(color);
     });
 
     describe("cloned", function () {
@@ -189,6 +207,12 @@ describe("Circle", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
     });
 
+    it ("should have color accessor", function () {
+        var color = createjs.Graphics.getRGB(0, 0, 0, 1);
+        original.setColor(color)
+        expect(original.getColor()).toEqual(color);
+    });
+
     describe("cloned", function () {
         var cloned;
 
@@ -243,6 +267,12 @@ describe("Triangle", function () {
 
     it("should be central coordinate object.", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
+    });
+
+    it ("should have color accessor", function () {
+        var color = createjs.Graphics.getRGB(0, 0, 0, 1);
+        original.setColor(color)
+        expect(original.getColor()).toEqual(color);
     });
 
     describe("cloned", function () {
@@ -301,6 +331,12 @@ describe("Rect", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
+    it ("should have color accessor", function () {
+        var color = createjs.Graphics.getRGB(0, 0, 0, 1);
+        original.setColor(color)
+        expect(original.getColor()).toEqual(color);
+    });
+
     describe("cloned", function () {
         var cloned;
 
@@ -355,6 +391,12 @@ describe("Ellipse", function () {
 
     it("should not be central coordinate object.", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
+    });
+
+    it ("should have color accessor", function () {
+        var color = createjs.Graphics.getRGB(0, 0, 0, 1);
+        original.setColor(color)
+        expect(original.getColor()).toEqual(color);
     });
 
     describe("cloned", function () {
@@ -413,6 +455,12 @@ describe("PolyStar", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
     });
 
+    it ("should have color accessor", function () {
+        var color = createjs.Graphics.getRGB(0, 0, 0, 1);
+        original.setColor(color)
+        expect(original.getColor()).toEqual(color);
+    });
+
     describe("cloned", function () {
         var cloned;
 
@@ -467,6 +515,12 @@ describe("RoundRect", function () {
 
     it("should not be central coordinate object.", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
+    });
+
+    it ("should have color accessor", function () {
+        var color = createjs.Graphics.getRGB(0, 0, 0, 1);
+        original.setColor(color)
+        expect(original.getColor()).toEqual(color);
     });
 
     describe("cloned", function () {
