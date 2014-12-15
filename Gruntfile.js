@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         options: {
           specs: 'test/**/*Spec.js',
           vendor: [
-            'https://raw.githubusercontent.com/CreateJS/EaselJS/release_v0.5.0/lib/easeljs-0.5.0.min.js',
+            'https://raw.githubusercontent.com/CreateJS/EaselJS/0.5.0/lib/easeljs-0.5.0.min.js',
             'http://raw.github.com/andrewplummer/Sugar/master/release/sugar.min.js'
           ]
         }
