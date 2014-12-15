@@ -83,6 +83,12 @@ describe("Text", function () {
         expect(original.getColor()).toEqual(color);
     });
 
+    it ("should have text accessor", function () {
+        var text = "foo";
+        original.setText(text)
+        expect(original.getText()).toEqual(text);
+    });
+
     describe("cloned", function () {
         var cloned;
 
