@@ -2,7 +2,7 @@
   "name": "jsCanvasNinja",
   "version": "0.1.0",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test && grunt coveralls"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
