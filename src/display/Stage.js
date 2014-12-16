@@ -110,7 +110,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
             return command;
         })(this));
 
-        if (typeof  this.onSave === 'function') {
+        if (typeof this.onSave === 'function') {
             this.onSave({canUndo:this.canUndo(), canRedo:this.canRedo()});
         }
     };
