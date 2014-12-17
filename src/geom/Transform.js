@@ -55,7 +55,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
      */
     Transform.scale = function (scaleX, scaleY) {
         scaleX = (scaleX === null || scaleX === undefined) ? this.scaleX : scaleX;
-        scaleY = (scaleY === null || scaleY === undefined) ? this.scaleX : scaleX;
+        scaleY = (scaleY === null || scaleY === undefined) ? this.scaleY : scaleY;
         if (!jsCanvasNinja.Utility.isCentralCoordinate(this)) {
             var m1 = new createjs.Matrix2D(), m2 = new createjs.Matrix2D();
             // Get center position
