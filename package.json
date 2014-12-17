@@ -10,6 +10,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "~0.2.7",
     "grunt-coveralls": "^1.0.0",
+    "grunt-jsdoc": "^0.5.7",
     "grunt-template-jasmine-istanbul": "^0.3.0"
   }
 }

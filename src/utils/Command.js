@@ -35,7 +35,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     }, p = Command.prototype;
 
     /**
-     *
+     * initialize
      */
     p.initialize = function () {
         this.executeTasks = [];
@@ -61,7 +61,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     };
 
     /**
-     *
+     * execute
      */
     p.execute = function () {
         for (var i = 0; i < this.executeTasks.length; i++) {
@@ -88,7 +88,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     };
 
     /**
-     *
+     * unexecute
      */
     p.unexecute = function () {
         for (var i = 0; i < this.unexecuteTasks.length; i++) {

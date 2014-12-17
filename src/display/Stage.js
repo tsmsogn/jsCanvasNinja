@@ -110,7 +110,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
             return command;
         })(this));
 
-        if (typeof  this.onSave === 'function') {
+        if (typeof this.onSave === 'function') {
             this.onSave({canUndo:this.canUndo(), canRedo:this.canRedo()});
         }
     };
@@ -602,7 +602,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     };
 
     /**
-     *
+     * deleteAll
      */
     p.deleteAll = function () {
         this.removeAllChildren();
@@ -635,7 +635,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     };
 
     /**
-     *
+     * undo
      */
     p.undo = function () {
         if (this.canUndo()) {
@@ -652,7 +652,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     };
 
     /**
-     *
+     * redo
      */
     p.redo = function () {
         if (this.canRedo()) {

@@ -36,7 +36,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     }, p = CommandManager.prototype;
 
     /**
-     *
+     * initialize
      */
     p.initialize = function () {
         this.didCommands = [];
@@ -70,6 +70,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     };
 
     /**
+     * undo
      *
      */
     p.undo = function () {
@@ -83,6 +84,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
     };
 
     /**
+     * redo
      *
      */
     p.redo = function () {

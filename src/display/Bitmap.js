@@ -56,7 +56,7 @@ this.jsCanvasNinja = this.jsCanvasNinja || {};
         y = (!isNaN(y)) ? y : 0;
 
         this.width = imageOrUri.width;
-        this.height =  imageOrUri.height;
+        this.height = imageOrUri.height;
         this.x = x - this.width * 0.5;
         this.y = y - this.height * 0.5;
         this._type = 0;
