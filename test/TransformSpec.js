@@ -15,7 +15,7 @@ describe("jsCanvasNinja.Transform", function () {
 
     describe("::rotate()", function () {
 
-        it("should rotate central coordinate object base on it's center point", function () {
+        it("should rotate central coordinate object base on it's center point.", function () {
             var scaleX = 2;
             var scaleY = 3;
             var radius = 10;
@@ -40,7 +40,7 @@ describe("jsCanvasNinja.Transform", function () {
             expect(stage.getObjectsUnderPoint(-scaleY * radius, 0)).not.toBeNull();
         });
 
-        it("should rotate non-central coordinate object base on it's center point", function () {
+        it("should rotate non-central coordinate object base on it's center point.", function () {
             var width = 10;
             var height = 20;
             var scaleX = 2;
@@ -69,7 +69,7 @@ describe("jsCanvasNinja.Transform", function () {
 
     describe("::scale()", function () {
 
-        it("should scale with object's scale when arguments are null", function () {
+        it("should scale with object's scale when arguments are null.", function () {
             var scaleX = 2;
             var scaleY = 3;
 
@@ -86,7 +86,7 @@ describe("jsCanvasNinja.Transform", function () {
             expect(target.scaleY).toEqual(scaleY);
         });
 
-        it("should scale central coordinate object base on it's center point", function () {
+        it("should scale central coordinate object base on it's center point.", function () {
             var scaleX = 2;
             var scaleY = 3;
             var radius = 10;
@@ -110,7 +110,7 @@ describe("jsCanvasNinja.Transform", function () {
             expect(stage.getObjectsUnderPoint(-scaleY * radius, 0)).not.toBeNull();
         });
 
-        it("should rotate non-central coordinate object base on it's center point", function () {
+        it("should rotate non-central coordinate object base on it's center point.", function () {
             var width = 10;
             var height = 20;
             var scaleX = 2;

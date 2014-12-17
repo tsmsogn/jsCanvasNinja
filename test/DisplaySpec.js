@@ -77,13 +77,13 @@ describe("Text", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
-    it ("should have color accessor", function () {
+    it ("should have color accessor.", function () {
         var color = createjs.Graphics.getRGB(0, 0, 0, 1);
         original.setColor(color)
         expect(original.getColor()).toEqual(color);
     });
 
-    it ("should have text accessor", function () {
+    it ("should have text accessor.", function () {
         var text = "foo";
         original.setText(text)
         expect(original.getText()).toEqual(text);
@@ -145,7 +145,7 @@ describe("Line", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
-    it ("should have color accessor", function () {
+    it ("should have color accessor.", function () {
         var color = createjs.Graphics.getRGB(0, 0, 0, 1);
         original.setColor(color)
         expect(original.getColor()).toEqual(color);
@@ -207,7 +207,7 @@ describe("Circle", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
     });
 
-    it ("should have color accessor", function () {
+    it ("should have color accessor.", function () {
         var color = createjs.Graphics.getRGB(0, 0, 0, 1);
         original.setColor(color)
         expect(original.getColor()).toEqual(color);
@@ -269,7 +269,7 @@ describe("Triangle", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
     });
 
-    it ("should have color accessor", function () {
+    it ("should have color accessor.", function () {
         var color = createjs.Graphics.getRGB(0, 0, 0, 1);
         original.setColor(color)
         expect(original.getColor()).toEqual(color);
@@ -331,7 +331,7 @@ describe("Rect", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
-    it ("should have color accessor", function () {
+    it ("should have color accessor.", function () {
         var color = createjs.Graphics.getRGB(0, 0, 0, 1);
         original.setColor(color)
         expect(original.getColor()).toEqual(color);
@@ -393,7 +393,7 @@ describe("Ellipse", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
-    it ("should have color accessor", function () {
+    it ("should have color accessor.", function () {
         var color = createjs.Graphics.getRGB(0, 0, 0, 1);
         original.setColor(color)
         expect(original.getColor()).toEqual(color);
@@ -455,7 +455,7 @@ describe("PolyStar", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(true);
     });
 
-    it ("should have color accessor", function () {
+    it ("should have color accessor.", function () {
         var color = createjs.Graphics.getRGB(0, 0, 0, 1);
         original.setColor(color)
         expect(original.getColor()).toEqual(color);
@@ -517,7 +517,7 @@ describe("RoundRect", function () {
         expect(jsCanvasNinja.Utility.isCentralCoordinate(original)).toEqual(false);
     });
 
-    it ("should have color accessor", function () {
+    it ("should have color accessor.", function () {
         var color = createjs.Graphics.getRGB(0, 0, 0, 1);
         original.setColor(color)
         expect(original.getColor()).toEqual(color);
