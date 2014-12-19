@@ -13,7 +13,7 @@ describe("jsCanvasNinja.Transform", function () {
         }).toThrow();
     });
 
-    describe("::rotate()", function () {
+    describe("rotate()", function () {
 
         it("should rotate central coordinate object base on it's center point", function () {
             var scaleX = 2;
@@ -67,7 +67,7 @@ describe("jsCanvasNinja.Transform", function () {
 
     });
 
-    describe("::scale()", function () {
+    describe("scale()", function () {
 
         it("should scale with object's scale when arguments are null", function () {
             var scaleX = 2;
